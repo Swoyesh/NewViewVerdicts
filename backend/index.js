@@ -1,7 +1,6 @@
 const express = require('express')
 const connectToMongo = require('./db')
 const cors = require('cors')
-require('dotenv').config()
 
 const app = express()
 const port = 5000
@@ -13,6 +12,7 @@ app.use(cors())
 app.use(express.json({ extended: true}))
 
 //Routes
+app.use('/api/auth', require('./routes/auth'))
 app.use('/api/movies', require('./routes/movies'))
 
 //Start server

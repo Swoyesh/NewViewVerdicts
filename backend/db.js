@@ -1,6 +1,6 @@
 const { default: mongoose } = require("mongoose")
 
-const URI = "mongodb://localhost:27017/ViewVerdict"
+const URI = "mongodb://localhost:27017/ViewVerdicts"
 
 const connectToMongo = async ()=> {
     try{
